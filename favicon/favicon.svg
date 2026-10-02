@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="ZY monogram">
+  <!--
+    Favicon: a monochrome "ZY" monogram on near-black.
+
+    The glyphs are drawn as paths rather than <text>, because text in an SVG
+    favicon depends on the font being available and renders inconsistently
+    across browsers at 16x16. Outlines are predictable at every size.
+
+    Z  — three strokes forming a Z
+    Y  — two diagonals meeting a stem
+  -->
+  <rect width="32" height="32" fill="#171717"/>
+
+  <g fill="none" stroke="#FAFAF8" stroke-width="2.4"
+     stroke-linecap="square" stroke-linejoin="miter">
+    <!-- Z -->
+    <path d="M5 8h8l-8 11h8"/>
+    <!-- Y -->
+    <path d="M18 8l4 6 4-6"/>
+    <path d="M22 14v9"/>
+  </g>
+</svg>

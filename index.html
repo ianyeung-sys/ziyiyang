@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ======================================================================
+       META
+       ====================================================================== -->
+  <title>Ziyi Yang — AI · Engineering · Product</title>
+  <meta name="description" content="Personal portfolio of Ziyi Yang, featuring AI applications, intelligent systems, product projects, research, and engineering work.">
+  <meta name="author" content="Ziyi Yang">
+  <meta name="theme-color" content="#F4F3F0">
+  <meta name="color-scheme" content="light">
+
+  <link rel="canonical" href="https://ianyeung-sys.github.io/ziyiyang/">
+
+  <!-- Open Graph ---------------------------------------------------------- -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ziyi Yang — AI · Engineering · Product">
+  <meta property="og:description" content="I build practical technology from ideas to real-world applications. AI applications, intelligent systems, product projects, and research.">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ziyi Yang — AI, Engineering, Product">
+  <!-- Project-site deployment: the site lives at /ziyiyang/ under the GitHub
+       Pages domain. -->
+  <meta property="og:url" content="https://ianyeung-sys.github.io/ziyiyang/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X --------------------------------------------------------- -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ziyi Yang — AI · Engineering · Product">
+  <meta name="twitter:description" content="I build practical technology from ideas to real-world applications.">
+  <meta name="twitter:image" content="assets/images/og-cover.png">
+
+  <!-- Icons ------------------------------------------------------------------
+       SVG is the primary icon; the PNG and ICO are fallbacks for browsers and
+       devices that cannot use it (notably older Safari and iOS home screens). -->
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="application-name" content="Ziyi Yang">
+
+  <!-- Fonts ------------------------------------------------------------------
+       Inter is loaded from Google Fonts with display=swap, so text renders in
+       the system fallback immediately and never blocks. If the request fails
+       (offline, blocked network, GitHub Pages behind a firewall) the stack in
+       --font-sans takes over and the layout is unaffected. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ======================================================================
+       STRUCTURED DATA
+       Helps search engines present the site as a person + portfolio.
+       ====================================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ziyi Yang",
+    "description": "Electronic Information Engineering student working across AI applications, intelligent systems, and product development.",
+    "url": "https://ianyeung-sys.github.io/",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Intelligent Systems",
+      "Product Development",
+      "Embedded Systems",
+      "Web Development",
+      "Signal Processing"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ========================================================================
+       HEADER / NAVIGATION
+       Sticky, compacting on scroll. Inside #site-header so the hero's top
+       padding and the mobile drawer are never obscured.
+       ======================================================================== -->
+  <header class="header" id="site-header">
+    <div class="container header__inner">
+      <a class="wordmark" href="#top" aria-label="Ziyi Yang — back to top">Ziyi Yang</a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#research">Research</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <span class="nav__sep" aria-hidden="true"></span>
+
+        <div class="nav__external">
+          <a class="nav__ext-link" href="https://github.com/ianyeung-sys"
+             target="_blank" rel="noopener noreferrer">
+            GitHub<span class="ext-mark" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle"
+              type="button"
+              id="nav-toggle"
+              aria-expanded="false"
+              aria-controls="mobile-drawer"
+              aria-label="Open menu">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile navigation drawer ----------------------------------------------
+       Marked aria-hidden until JavaScript opens it, so the links are not
+       reachable by assistive technology while it is closed. -->
+  <div class="drawer" id="mobile-drawer" hidden aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul class="drawer__list">
+        <li><a class="drawer__link" style="--i:0" href="#about">About</a></li>
+        <li><a class="drawer__link" style="--i:1" href="#experience">Experience</a></li>
+        <li><a class="drawer__link" style="--i:2" href="#projects">Projects</a></li>
+        <li><a class="drawer__link" style="--i:3" href="#research">Research</a></li>
+        <li><a class="drawer__link" style="--i:4" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="drawer__footer">
+        <a href="https://github.com/ianyeung-sys" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="mailto:ianyeung818@gmail.com">Email</a>
+        <a href="#request-cv" data-close-drawer>Request CV</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ======================================================================
+         01. HERO
+         ====================================================================== -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1 class="hero__name reveal" id="hero-name">Ziyi Yang</h1>
+
+          <p class="hero__tagline reveal" style="transition-delay:60ms">
+            <span>AI</span>
+            <span aria-hidden="true">·</span>
+            <span>Engineering</span>
+            <span aria-hidden="true">·</span>
+            <span>Product</span>
+          </p>
+
+          <p class="hero__pitch reveal" style="transition-delay:120ms">
+            I build practical technology from ideas to real-world applications.
+          </p>
+
+          <div class="hero__actions reveal" style="transition-delay:180ms">
+            <a class="btn btn--primary" href="#projects">
+              Explore my work<span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost" href="#request-cv">Request CV</a>
+          </div>
+        </div>
+
+        <!-- Hero visual ------------------------------------------------------
+             Responsive <picture>: WebP first for the smaller file, JPEG as the
+             fallback. The 1x variant is 600x750 and the 2x is the full
+             1200x1500 master, so high-density screens get the sharper file
+             while ordinary screens do not pay for it. The 4:5 frame is defined
+             on the container so there is no layout shift while it decodes. -->
+        <figure class="hero__visual reveal reveal--media" style="transition-delay:140ms">
+          <div class="hero__frame">
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/images/profile/portrait@2x.webp 1x, assets/images/profile/portrait.webp 2x">
+              <img src="assets/images/profile/portrait@2x.jpg"
+                   srcset="assets/images/profile/portrait@2x.jpg 1x, assets/images/profile/portrait.jpg 2x"
+                   alt="Portrait of Ziyi Yang"
+                   width="600" height="750"
+                   fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <figcaption class="hero__caption">
+            <span class="label">Ziyi Yang</span>
+            <span class="label">Hong Kong</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         02. ABOUT
+         ====================================================================== -->
+    <section class="section section--ruled" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="about-title">About</h2>
+          </div>
+          <span class="figure">01</span>
+        </div>
+
+        <div class="about__grid">
+          <div>
+            <p class="about__lede reveal">
+              I work at the intersection of AI, intelligent systems, and product development —
+              and I care most about the point where an idea becomes something someone can
+              actually use.
+            </p>
+            <div class="about__body prose reveal" style="transition-delay:80ms">
+              <p>
+                I am an Electronic Information Engineering student at HKUST. Most of what I
+                build starts the same way: a problem I have run into myself, or one I have
+                watched someone else struggle with.
+              </p>
+              <p>
+                That has led me in a few different directions — AI-powered educational tools,
+                intelligent hardware, web products, and research work on signal processing. I
+                like the range. Building an embedded system and building a web product ask
+                different questions, and moving between them keeps me honest about what
+                actually matters in each.
+              </p>
+              <p>
+                My approach is simple: start with a real problem, build something tangible,
+                test it with real users, and keep improving it.
+              </p>
+            </div>
+          </div>
+
+          <!-- Snapshot ------------------------------------------------------
+               Editorial information panel. Keep values short — this is a glance,
+               not a resume. -->
+          <aside class="snapshot reveal" style="transition-delay:140ms" aria-labelledby="snapshot-title">
+            <h3 class="sr-only" id="snapshot-title">At a glance</h3>
+            <dl class="snapshot__list">
+              <div class="snapshot__row">
+                <dt class="label">Currently</dt>
+                <dd>HKUST</dd>
+              </div>
+              <div class="snapshot__row">
+                <dt class="label">Focus</dt>
+                <dd>AI · Intelligent Systems · Product</dd>
+              </div>
+              <div class="snapshot__row">
+                <dt class="label">Interested in</dt>
+                <dd>
+                  <span>AI Applications</span>
+                  <span>Product Development</span>
+                  <span>Embedded Systems</span>
+                  <span>Research</span>
+                </dd>
+              </div>
+              <div class="snapshot__row">
+                <dt class="label">Based in</dt>
+                <dd>Hong Kong</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         03. EXPERIENCE
+         Timeline entries. Each item is a disclosure: the header row is a button
+         that expands the detail panel. See script.js for the toggle logic.
+         To add a role, copy one <li class="timeline__item"> block.
+         ====================================================================== -->
+    <section class="section section--ruled" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="experience-title">Experience</h2>
+          </div>
+          <span class="figure">02</span>
+        </div>
+
+        <ol class="timeline">
+
+          <!-- ▸ ByteDance ------------------------------------------------- -->
+          <li class="timeline__item reveal">
+            <h3>
+              <button class="timeline__toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="exp-bytedance">
+                <span class="timeline__head">
+                  <span class="timeline__org">ByteDance</span>
+                  <span class="timeline__role">AI Data &amp; Content Intern</span>
+                </span>
+                <span class="timeline__meta">
+                  <span class="timeline__period">May 2026 – Sep 2026</span>
+                  <span class="timeline__icon" aria-hidden="true"></span>
+                </span>
+              </button>
+            </h3>
+
+            <div class="timeline__panel" id="exp-bytedance">
+              <div>
+                <div class="timeline__body">
+                  <div class="timeline__block">
+                    <h4 class="label">What I worked on</h4>
+                    <ul class="timeline__list">
+                      <li>Evaluated and classified AI-generated scientific and visual content.</li>
+                      <li>Refined evaluation criteria for AI-generated research content.</li>
+                      <li>Summarised evaluation results for use across the team.</li>
+                      <li>Achieved the highest monthly output within the team.</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline__block">
+                    <h4 class="label">What I learned</h4>
+                    <ul class="timeline__list">
+                      <li>How much the quality of an AI system depends on the clarity of the criteria used to judge its output.</li>
+                      <li>That writing an evaluation standard someone else can apply consistently is a design problem, not a paperwork task.</li>
+                      <li>How to keep throughput high without letting consistency drift.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- ▸ Noah's Ark ------------------------------------------------- -->
+          <li class="timeline__item reveal">
+            <h3>
+              <button class="timeline__toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="exp-noahsark">
+                <span class="timeline__head">
+                  <span class="timeline__org">Noah&rsquo;s Ark</span>
+                  <span class="timeline__role">AI Application Development Intern</span>
+                </span>
+                <span class="timeline__meta">
+                  <span class="timeline__period">Jan 2026 – Apr 2026</span>
+                  <span class="timeline__icon" aria-hidden="true"></span>
+                </span>
+              </button>
+            </h3>
+
+            <div class="timeline__panel" id="exp-noahsark">
+              <div>
+                <div class="timeline__body">
+                  <div class="timeline__block">
+                    <h4 class="label">What I worked on</h4>
+                    <ul class="timeline__list">
+                      <li>Worked on an AI-oriented educational application.</li>
+                      <li>Participated in application testing and user testing.</li>
+                      <li>Gathered feedback and improved application interactions.</li>
+                      <li>Contributed to the development of an educational tool for children with special needs.</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline__block">
+                    <h4 class="label">What I learned</h4>
+                    <ul class="timeline__list">
+                      <li>When users have different needs from the ones you assumed, testing tells you — guessing does not. Most of the improvements came directly from watching people use it.</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline__foot">
+                    <!-- Verified against noahsark.org.in -->
+                    <a class="link-arrow-host"
+                       href="https://www.noahsark.org.in/"
+                       target="_blank" rel="noopener noreferrer">
+                      Visit Noah&rsquo;s Ark<span class="ext-mark" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         04. PROJECTS
+         The four entries below are rendered from the `projects` array in
+         script.js — edit that array to change titles, copy, images, technology
+         and links. The container is intentionally empty in the source so the
+         content lives in one obvious place.
+
+         Each object's `detail` field drives the case-study modal.
+         ====================================================================== -->
+    <section class="section section--ruled" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="projects-title">Selected <em>Projects</em></h2>
+          </div>
+          <span class="figure">03</span>
+        </div>
+
+        <!-- Populated by script.js. If JavaScript is unavailable, the
+             <noscript> fallback below keeps the most important information
+             reachable. -->
+        <div class="projects" id="projects-list"></div>
+
+        <noscript>
+          <div class="prose" style="margin-top:2rem">
+            <p>
+              <strong>China Travel Guide</strong> — A mobile-friendly travel guide designed for
+              international students who want to explore China but do not know where to start.
+            </p>
+            <p>
+              <strong>Intelligent Inspection Car</strong> — A multi-sensor intelligent inspection
+              vehicle integrating embedded control, computer vision, and sensor fusion.
+            </p>
+            <p>
+              <strong>AI Voice Projection Clock</strong> — An ESP32-S3 based intelligent assistant
+              combining voice interaction, weather information, alarms, music, and a projected display.
+            </p>
+            <p>
+              <strong>AI Education Application</strong> — An educational application designed to
+              support children with special needs, developed with
+              <a href="https://www.noahsark.org.in/" target="_blank" rel="noopener noreferrer">Noah&rsquo;s Ark</a>.
+            </p>
+          </div>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         05. RESEARCH
+         ====================================================================== -->
+    <section class="section section--ruled" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="research-title">Research</h2>
+          </div>
+          <span class="figure">04</span>
+        </div>
+
+        <article class="paper reveal">
+          <div class="paper__grid">
+            <!-- Main column: the citation, in academic register ------------- -->
+            <div>
+              <p class="label">IEEE Sensors Journal · 2025</p>
+
+              <h3 class="paper__title">
+                A High Precision DOA Estimation Method Based on Convolutional Neural Network
+              </h3>
+
+              <p class="paper__venue">
+                <strong>IEEE Sensors Journal</strong>
+                <span>Volume 25, Issue 23</span>
+                <span>pp. 42964–42977</span>
+                <span>2025</span>
+              </p>
+
+              <p class="paper__authors">
+                E. Huang, <span class="is-self">Z. Yang</span>, C. Zhao, X. Mao
+              </p>
+
+              <div class="paper__contribution">
+                <p class="label">My contribution</p>
+                <p>
+                  Contributed to English manuscript revision and figure preparation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Side column: research area plus relevant technical context --- -->
+            <aside class="paper__aside">
+              <dl class="paper__fields">
+                <div class="snapshot__row">
+                  <dt class="label">Research area</dt>
+                  <dd>
+                    <span>Direction-of-Arrival Estimation</span>
+                    <span>CNN</span>
+                    <span>Signal Processing</span>
+                    <span>Transfer Learning</span>
+                    <span>Subspace Methods</span>
+                  </dd>
+                </div>
+              </dl>
+
+              <div class="paper__context">
+                <p class="label">Technical context</p>
+                <ul>
+                  <li>CNN-based DOA estimation</li>
+                  <li>Adjacent subspace interference</li>
+                  <li>Transfer learning</li>
+                  <li>Grid / interleaving label design</li>
+                  <li>10-element ULA simulation setup</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Signal pipeline figure ----------------------------------------
+               Inline SVG so it inherits the theme and stays sharp everywhere.
+               Styled by the `.pipeline svg .pl-*` rules in style.css. -->
+          <figure class="pipeline">
+            <svg viewBox="0 0 1000 260" role="img"
+                 aria-label="Pipeline: signal is received by a ten-element uniform linear array, converted to a covariance representation, processed by a CNN trained with transfer learning, and output as a direction-of-arrival estimate.">
+              <!-- Source -->
+              <rect class="pl-box" x="30" y="96" width="130" height="68" rx="5"/>
+              <text class="pl-label" x="95" y="122">SOURCE</text>
+              <text class="pl-name"  x="95" y="146">Signal</text>
+
+              <!-- Array -->
+              <rect class="pl-box" x="200" y="96" width="130" height="68" rx="5"/>
+              <text class="pl-label" x="265" y="122">SENSING</text>
+              <text class="pl-name"  x="265" y="146">10-elem ULA</text>
+
+              <!-- Representation -->
+              <rect class="pl-box" x="370" y="96" width="130" height="68" rx="5"/>
+              <text class="pl-label" x="435" y="122">REPRESENT</text>
+              <text class="pl-name"  x="435" y="146">Covariance</text>
+
+              <!-- CNN (emphasised) -->
+              <rect class="pl-box-hi" x="540" y="96" width="130" height="68" rx="5"/>
+              <text class="pl-label" x="605" y="122">LEARNING</text>
+              <text class="pl-name"  x="605" y="146">CNN</text>
+
+              <!-- Output -->
+              <rect class="pl-box" x="710" y="96" width="130" height="68" rx="5"/>
+              <text class="pl-label" x="775" y="122">OUTPUT</text>
+              <text class="pl-name"  x="775" y="146">DOA estimate</text>
+
+              <!-- Connectors -->
+              <line class="pl-link" x1="160" y1="130" x2="192" y2="130"/>
+              <line class="pl-link" x1="330" y1="130" x2="362" y2="130"/>
+              <line class="pl-link" x1="500" y1="130" x2="532" y2="130"/>
+              <line class="pl-link" x1="670" y1="130" x2="702" y2="130"/>
+
+              <polygon class="pl-head" points="192,126 200,130 192,134"/>
+              <polygon class="pl-head" points="362,126 370,130 362,134"/>
+              <polygon class="pl-head" points="532,126 540,130 532,134"/>
+              <polygon class="pl-head" points="702,126 710,130 702,134"/>
+
+              <!-- Transfer-learning annotation over the CNN stage -->
+              <path class="pl-faint" d="M578 92a27 27 0 0 1 54 0"/>
+              <text class="pl-note" x="605" y="52">TRANSFER LEARNING</text>
+
+              <!-- Array element ticks under the ULA box -->
+              <line class="pl-link" x1="232" y1="176" x2="298" y2="176"/>
+              <g class="pl-head">
+                <rect x="232" y="180" width="3" height="8"/>
+                <rect x="238.5" y="180" width="3" height="8"/>
+                <rect x="245" y="180" width="3" height="8"/>
+                <rect x="251.5" y="180" width="3" height="8"/>
+                <rect x="258" y="180" width="3" height="8"/>
+                <rect x="264.5" y="180" width="3" height="8"/>
+                <rect x="271" y="180" width="3" height="8"/>
+                <rect x="277.5" y="180" width="3" height="8"/>
+                <rect x="284" y="180" width="3" height="8"/>
+                <rect x="290.5" y="180" width="3" height="8"/>
+              </g>
+
+              <!-- Axis baseline -->
+              <line class="pl-faint" x1="30" y1="226" x2="840" y2="226"/>
+              <text class="pl-note" x="435" y="246">PROCESSING PIPELINE</text>
+            </svg>
+
+            <figcaption class="pipeline__caption">
+              Simplified representation of the estimation pipeline — illustrative, not the paper&rsquo;s own figure.
+            </figcaption>
+          </figure>
+
+          <div class="paper__actions">
+            <!-- Verified DOI: https://doi.org/10.1109/JSEN.2025.3618265 -->
+            <a class="btn btn--ghost"
+               href="https://ieeexplore.ieee.org/document/11202344"
+               target="_blank" rel="noopener noreferrer">
+              Read paper<span class="ext-mark" aria-hidden="true">↗</span>
+            </a>
+            <a class="link-arrow-host"
+               href="https://doi.org/10.1109/JSEN.2025.3618265"
+               target="_blank" rel="noopener noreferrer">
+              DOI<span class="ext-mark" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         06. SKILLS
+         Grouped by discipline. No ratings or progress bars by design.
+         ====================================================================== -->
+    <section class="section section--ruled" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="skills-title">Skills</h2>
+          </div>
+          <span class="figure">05</span>
+        </div>
+
+        <div class="skills">
+          <div class="skills__group reveal">
+            <h3 class="skills__name">
+              <span class="skills__index">A</span>AI &amp; Data
+            </h3>
+            <ul class="skills__list">
+              <li>AI Application Development</li>
+              <li>Generative AI</li>
+              <li>Machine Learning</li>
+              <li>AI Content Evaluation</li>
+              <li>Computer Vision</li>
+            </ul>
+          </div>
+
+          <div class="skills__group reveal" style="transition-delay:60ms">
+            <h3 class="skills__name">
+              <span class="skills__index">B</span>Engineering
+            </h3>
+            <ul class="skills__list">
+              <li>C / C++</li>
+              <li>STM32</li>
+              <li>ESP32</li>
+              <li>Embedded Systems</li>
+              <li>Sensor Fusion</li>
+              <li>PID Control</li>
+              <li>Kalman Filtering</li>
+            </ul>
+          </div>
+
+          <div class="skills__group reveal" style="transition-delay:120ms">
+            <h3 class="skills__name">
+              <span class="skills__index">C</span>Web &amp; Product
+            </h3>
+            <ul class="skills__list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+              <li>Git / GitHub</li>
+              <li>Prototyping</li>
+              <li>User Testing</li>
+            </ul>
+          </div>
+
+          <div class="skills__group reveal" style="transition-delay:180ms">
+            <h3 class="skills__name">
+              <span class="skills__index">D</span>Research
+            </h3>
+            <ul class="skills__list">
+              <li>Signal Processing</li>
+              <li>DOA Estimation</li>
+              <li>CNN</li>
+              <li>Scientific Writing</li>
+              <li>Data Analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         07. HIGHLIGHTS
+         Kept compact and visually quieter than Projects. Add a row by copying
+         one <div class="highlight"> block.
+         ====================================================================== -->
+    <section class="section section--tight section--ruled" id="highlights" aria-labelledby="highlights-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="highlights-title">Highlights</h2>
+          </div>
+          <span class="figure">06</span>
+        </div>
+
+        <div class="highlights reveal">
+          <div class="highlight">
+            <div>
+              <p class="highlight__name">National Scholarship</p>
+            </div>
+            <span class="highlight__year">2025</span>
+          </div>
+
+          <div class="highlight">
+            <div>
+              <p class="highlight__name">IEEE Sensors Journal Publication</p>
+              <p class="highlight__note">Co-author</p>
+            </div>
+            <span class="highlight__year">2025</span>
+          </div>
+
+          <div class="highlight">
+            <div>
+              <p class="highlight__name">NUS AI Summer Camp</p>
+              <p class="highlight__note">Distinguished Group</p>
+            </div>
+            <!-- TODO: replace with the actual year -->
+            <span class="highlight__year">[ADD DATE]</span>
+          </div>
+
+          <div class="highlight">
+            <div>
+              <p class="highlight__name">UNESCO Youth Forum</p>
+              <p class="highlight__note">Chinese Student Representative</p>
+            </div>
+            <!-- TODO: replace with the actual year -->
+            <span class="highlight__year">[ADD DATE]</span>
+          </div>
+
+          <div class="highlight">
+            <div>
+              <p class="highlight__name">National English Competence Competition</p>
+              <p class="highlight__note">Silver Award</p>
+            </div>
+            <!-- TODO: replace with the actual year -->
+            <span class="highlight__year">[ADD DATE]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         08. CONTACT
+         ====================================================================== -->
+    <section class="section section--ruled" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__main">
+            <span class="section-head__mark" aria-hidden="true"></span>
+            <h2 class="h2" id="contact-title">Let&rsquo;s Connect</h2>
+          </div>
+          <span class="figure">07</span>
+        </div>
+
+        <div class="contact__grid">
+          <div class="reveal">
+            <p class="lead">
+              I&rsquo;m always interested in conversations about AI, intelligent systems,
+              product development, and new opportunities.
+            </p>
+          </div>
+
+          <!-- Contact links -------------------------------------------------- -->
+          <div class="contact__links reveal" style="transition-delay:80ms">
+
+            <a class="contact__link" href="mailto:ianyeung818@gmail.com">
+              <svg class="contact__link-icon" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m3 7 9 6 9-6"/>
+              </svg>
+              <span>
+                <span class="contact__link-label">Email</span>
+                <span class="contact__link-value">ianyeung818@gmail.com</span>
+              </span>
+              <span class="contact__link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="contact__link" href="https://github.com/ianyeung-sys"
+               target="_blank" rel="noopener noreferrer">
+              <svg class="contact__link-icon" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.2-.4 6.6-1.6 6.6-7.1a5.4 5.4 0 0 0-1.5-3.8 5 5 0 0 0-.1-3.8s-1.2-.4-3.9 1.5a13 13 0 0 0-7 0C6.4.9 5.2 1.3 5.2 1.3a5 5 0 0 0-.1 3.8A5.4 5.4 0 0 0 3.6 9c0 5.5 3.4 6.7 6.6 7.1a3.4 3.4 0 0 0-1 2.6V22"/>
+              </svg>
+              <span>
+                <span class="contact__link-label">GitHub</span>
+                <span class="contact__link-value">ianyeung-sys</span>
+              </span>
+              <span class="contact__link-arrow" aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- CV request -------------------------------------------------------
+             The CV is not published on the site. A visitor submits their email
+             and the PDF is sent to them, so the document is not openly
+             downloadable or indexable.
+
+             NOTE: this form needs a form endpoint to actually deliver mail —
+             see the comment block in script.js (initCvRequest) for the two
+             supported options. Until one is configured the form validates and
+             then offers a mailto fallback, so it never silently fails. -->
+        <div class="cv-request reveal" id="request-cv">
+          <div class="cv-request__grid">
+            <div>
+              <h3 class="h4">Request my CV</h3>
+              <p class="cv-request__note">
+                I keep my CV behind a request form rather than posting it publicly.
+                Leave your email and I&rsquo;ll send the PDF over — a short note about
+                why you&rsquo;d like it helps me reply usefully.
+              </p>
+            </div>
+
+            <form class="cv-form" id="cv-form" novalidate>
+              <div class="cv-form__field">
+                <label class="label" for="cv-email">Your email</label>
+                <input class="cv-form__input"
+                       type="email"
+                       id="cv-email"
+                       name="email"
+                       required
+                       autocomplete="email"
+                       placeholder="you@example.com"
+                       aria-describedby="cv-email-error">
+                <p class="cv-form__error" id="cv-email-error" role="alert" hidden></p>
+              </div>
+
+              <div class="cv-form__field">
+                <label class="label" for="cv-note">
+                  Note <span class="cv-form__optional">(optional)</span>
+                </label>
+                <textarea class="cv-form__input cv-form__input--area"
+                          id="cv-note"
+                          name="note"
+                          rows="3"
+                          placeholder="Who you are, and what you'd like to know."></textarea>
+              </div>
+
+              <!-- Honeypot: hidden from people, tempting to bots. -->
+              <div class="cv-form__trap" aria-hidden="true">
+                <label for="cv-website">Website</label>
+                <input type="text" id="cv-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="cv-form__actions">
+                <button class="btn btn--primary" type="submit" id="cv-submit">
+                  Send request
+                </button>
+                <p class="cv-form__privacy">
+                  Your email is used only to send the CV. No lists, no sharing.
+                </p>
+              </div>
+
+              <!-- Status region: announced to screen readers when it changes. -->
+              <p class="cv-form__status" id="cv-status" role="status" aria-live="polite" hidden></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Ziyi Yang</p>
+          <p class="label footer__tagline">AI · Engineering · Product</p>
+        </div>
+
+        <div class="footer__meta">
+          <p class="footer__built">
+            Built with HTML, CSS &amp; JavaScript.<br>
+            Hosted on GitHub Pages.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__top">
+        <p class="label">© 2026 Ziyi Yang</p>
+        <a class="link-arrow-host" href="#top">
+          Back to top<span class="link-arrow" aria-hidden="true">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       PROJECT CASE-STUDY MODAL
+       A single <dialog> reused for every project. script.js fills in the
+       content. <dialog> gives us focus trapping, Esc-to-close and backdrop
+       handling natively, so there is no custom focus-trap code to maintain.
+       ======================================================================== -->
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal__scroll">
+      <div class="modal__bar">
+        <span class="label" id="modal-eyebrow">Case study</span>
+        <button class="modal__close" type="button" data-modal-close>
+          Close
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+               stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M1 1l10 10M11 1L1 11"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Content is injected here by script.js -->
+      <div class="modal__inner" id="modal-content"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

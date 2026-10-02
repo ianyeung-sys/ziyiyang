@@ -1,0 +1,9 @@
+# WorkBuddy AI project tooling and local development artifacts.
+# This folder holds verification scripts, browser-test screenshots, and agent
+# memory. None of it is part of the deployed website.
+.workbuddy-ai/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp

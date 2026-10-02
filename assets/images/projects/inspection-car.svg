@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-label="Intelligent Inspection Car project placeholder">
+  <defs>
+    <linearGradient id="ig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EFEEE9"/>
+      <stop offset="100%" stop-color="#DAD8D2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#ig)"/>
+  <line x1="0" y1="560" x2="1200" y2="560" stroke="#CCC8C1" stroke-width="1"/>
+  <!-- chassis -->
+  <rect x="360" y="452" width="480" height="66" rx="6" fill="#FAFAF8" stroke="#BDB8B0" stroke-width="1.5"/>
+  <rect x="392" y="424" width="196" height="30" rx="4" fill="#E8E6E0" stroke="#BDB8B0" stroke-width="1.25"/>
+  <rect x="612" y="432" width="80" height="22" rx="3" fill="#DEDBD4" stroke="#BDB8B0" stroke-width="1.25"/>
+  <!-- camera module -->
+  <rect x="760" y="386" width="66" height="66" rx="5" fill="#2A2A2A"/>
+  <circle cx="793" cy="419" r="19" fill="#171717"/>
+  <circle cx="793" cy="419" r="8" fill="#3A3A3A"/>
+  <rect x="782" y="452" width="22" height="18" fill="#2A2A2A"/>
+  <!-- ultrasonic sensors -->
+  <circle cx="410" cy="452" r="15" fill="#FAFAF8" stroke="#BDB8B0" stroke-width="1.5"/>
+  <circle cx="410" cy="452" r="6" fill="#C6C2BA"/>
+  <circle cx="470" cy="452" r="15" fill="#FAFAF8" stroke="#BDB8B0" stroke-width="1.5"/>
+  <circle cx="470" cy="452" r="6" fill="#C6C2BA"/>
+  <!-- sensor waves -->
+  <path d="M395 424a22 22 0 0 1 30 0" fill="none" stroke="#C0BCB5" stroke-width="1.25"/>
+  <path d="M455 424a22 22 0 0 1 30 0" fill="none" stroke="#C0BCB5" stroke-width="1.25"/>
+  <!-- MCU board -->
+  <rect x="560" y="470" width="112" height="34" rx="3" fill="#2A2A2A"/>
+  <text x="616" y="492" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1" fill="#F4F3F0">STM32F407</text>
+  <!-- wheels -->
+  <circle cx="424" cy="524" r="40" fill="#2A2A2A"/>
+  <circle cx="424" cy="524" r="14" fill="#4A4A4A"/>
+  <circle cx="776" cy="524" r="40" fill="#2A2A2A"/>
+  <circle cx="776" cy="524" r="14" fill="#4A4A4A"/>
+  <circle cx="530" cy="524" r="30" fill="#3A3A3A"/>
+  <circle cx="530" cy="524" r="11" fill="#585858"/>
+  <circle cx="700" cy="524" r="30" fill="#3A3A3A"/>
+  <circle cx="700" cy="524" r="11" fill="#585858"/>
+  <!-- annotation -->
+  <line x1="793" y1="376" x2="793" y2="300" stroke="#BDB8B0" stroke-width="1"/>
+  <text x="793" y="288" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12.5" letter-spacing="2.4" fill="#8A857D">OPENMV</text>
+  <line x1="616" y1="514" x2="616" y2="600" stroke="#BDB8B0" stroke-width="1"/>
+  <text x="616" y="620" text-anchor="middle" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12.5" letter-spacing="2.4" fill="#8A857D">MPU6050 · PID · KALMAN</text>
+  <text x="90" y="120" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" letter-spacing="5.5" fill="#8A857D">INTELLIGENT INSPECTION CAR</text>
+  <text x="90" y="146" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="1.2" fill="#A19C94">Replace with photo / system diagram at assets/images/projects/</text>
+</svg>

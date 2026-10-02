@@ -1,0 +1,30 @@
+{
+  "name": "Ziyi Yang — AI · Engineering · Product",
+  "short_name": "Ziyi Yang",
+  "description": "Personal portfolio of Ziyi Yang, featuring AI applications, intelligent systems, product projects, research, and engineering work.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F3F0",
+  "theme_color": "#F4F3F0",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
